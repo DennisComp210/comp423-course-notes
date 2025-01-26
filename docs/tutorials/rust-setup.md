@@ -1,7 +1,7 @@
 # **Setting Up a Dev Container for Rust** 
 
 * **Primary author:** [Dennis Wang](https://github.com/DennisComp210)
-* **Reviewer:** [Juktong](https://github.com/Juktong)
+* **Reviewer:** [Matseoi](https://github.com/Juktong)
 
 * **Contributions From/Reference:** [Starting a Static Website Project with MkDocs - Kris Jordan](https://comp423-25s.github.io/resources/MkDocs/tutorial/)
 
