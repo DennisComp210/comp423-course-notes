@@ -6,7 +6,7 @@
 * **Contributions From/Reference:** [Starting a Static Website Project with MkDocs - Kris Jordan](https://comp423-25s.github.io/resources/MkDocs/tutorial/)
 
 ## **Introduction**
-Welcome to this tutorial! In this guide, you will learn how to set up a basic Rust development container and write a simple Rust program that outputs "Hello COMP423!". 
+Welcome to this tutorial! In this guide, you will learn how to set up a basic Rust development container in Visual Studio Code and write a simple Rust program that outputs "Hello COMP423!". 
 Be sure to follow all instructions carefully from top to bottom to ensure that everything is set up correctly. By the end of this tutorial, you will have acquired the skills to:
 
 * Create a new directory and initialize a Git repository.
@@ -28,7 +28,7 @@ Before diving into this tutorial, ensure you have the following tools installed 
 2. **Git** 
     * Ensure Git is accessible. Check if Git is installed by running the following command in your terminal:
 
-        ```
+        ``` 
         git --version
         ``` 
 
@@ -159,7 +159,7 @@ Before preceeding, ensure that **Docker** is installed, running, and accessible 
 
 **(E) The** ```devcontainer.json``` files defines the configuration for your development environment. Open this file and add the following configurations to it: 
 
-```
+``` js
 {
   "name": "Rust DevContainer Tutorial",
   "image": "mcr.microsoft.com/devcontainers/rust:latest",
@@ -187,7 +187,7 @@ Configurations Explained:
 
 ### **Step 2: Reopen the Project in a Dev Container**
 
-**(A) Once** the .devcontainer/devcontainer.json file is set up. You will see a pop-up in the bottom right corner of your screen in VS Code that says "Folder contains a Dev Container configuration file. Reopen folder to develop in a container". Click on **"Reopen in Container"**. This will boot up a Docker container, a virtual environment that will have the correct version of Rust installed for you automatically. This may take a few minutes for the image to be downloaded and all the requirements to be installed. 
+**(A) Once** the ```.devcontainer/devcontainer.json``` file is set up. You will see a pop-up in the bottom right corner of your screen in VS Code that says "Folder contains a Dev Container configuration file. Reopen folder to develop in a container". Click on **"Reopen in Container"**. This will boot up a Docker container, a virtual environment that will have the correct version of Rust installed for you automatically. This may take a few minutes for the image to be downloaded and all the requirements to be installed. 
 
 * If you do not see this pop-up, you can also open the VS Code Command Palette (Ctrl+Shift+P on Window or Cmd+Shift+P on Mac) and search for and select the **"Dev Containers: Reopen in Container"** option.
 
@@ -219,17 +219,17 @@ rustc --version
 
 * ```cargo new```: Creates a new Rust project. The --vcs none flag prevents Cargo from initializing a Git repository.
 
-* ```cargo build```: Compiles the program but does not run it. Similar to using gcc in COMP211 to compile a C program.
+* ```cargo build```: Compiles the program but does not run it. Similar to using gcc in COMP211 to compile a C program. (Use this command when you want to check for compilation errors without executing the program) 
 
     * This command is similar to the gcc commands we learned in COMP211 to compile a C program to generate an executable file.
         * example in C:
-            ```
+            ``` 
             gcc -o output_name source_file.c
             ```
-    * cargo build automates more of the process, including dependency management, and produces an executable.
-    * Similar to what we learned in Comp 211 for C, we can run the compiled file for Rust using ```./```
+    * ```cargo build``` automates more of the process, including dependency management, and produces an executable.
+    * Similar to what we learned in Comp 211 for C, we can run the compiled file created by running ```cargo build``` for Rust using ```./```
 
-* ```cargo run```: Combines both the build (compile) and run steps for convenience. Think of it as a single command to compile and execute a program.
+* ```cargo run```: Combines both the build (compile) and run steps for convenience. Think of it as a single command to compile and execute a program. (Use this command if you want to quickly test how your program runs)
 
 
 
@@ -271,7 +271,7 @@ fn main() {
 
 ### **Step 3: Compile and Run the Project**
 
-**(A) Rust** uses the **cargo build** command to compile your project. This command reads the ```Cargo.toml``` file for metadata and dependencies, then compiles the code into an executable file.
+**(A) Rust** uses the **cargo build** command to compile your project. This command reads the ```Cargo.toml``` file for metadata and dependencies, then compiles the code into an executable file but does not run it.
 
 **(B) Make** sure you are in the or navigate to the root of the binary project directory (```hello_comp423```)  
 
@@ -321,7 +321,7 @@ Hello, COMP423!
 
 After verifying your program works, do the following:
 
-**Update**: Update the REAMDE.md in the root directory (```rust-dev-tutorial```) to include a link to this tutorial.
+**Update**: Update the ```REAMDE.md``` in the root directory (```rust-dev-tutorial```) to include a link to this tutorial.
 
 **Commit**: Add and commit all changes made to your local repository using the following commands: 
 ```

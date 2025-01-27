@@ -3,6 +3,8 @@ theme:
   name: material
   features:
     - content.code.copy
+    - content.code.select
+    - content.code.annotate
     - search.suggest
     - search.highlight
   font:
